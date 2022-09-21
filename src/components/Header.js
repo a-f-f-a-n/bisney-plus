@@ -71,7 +71,7 @@ const Nav_Menu = styled.div`
             position: relative;
             padding: 0 10px;
             &:after { 
-                content: '';
+                content: "";
 
                 height: 2px;
                 position: absolute;
@@ -83,10 +83,10 @@ const Nav_Menu = styled.div`
                 background: white;
                 opacity: 0;
 
+                transition: all 250ms cubic-bezier(.25,.46,.45,.94);
                 transform-origin: left center;
                 transform: scaleX(0);
                 
-                transition: all 250ms cubic-bezier(0.25, 0.45, 0.45; 0.95) 0s; 
             }
         }
         &:hover {
