@@ -1,10 +1,12 @@
 import React from 'react' 
 import styled from 'styled-components'
 import ImageSlide from './ImageSlide'
+import LogoViewers from './LogoViewers'
 function Home() {
     return (
         <Body>
             <ImageSlide />
+            <LogoViewers />
         </Body>
     )
 }
@@ -15,6 +17,7 @@ const Body = styled.main`
     min-height: calc(100vh - 70px); //test
     padding: 0 calc(3.5vw + 5px);
     position: relative;
+    overflow-x: hidden; //this makes sure that content overflowing view width doesnt do that anymore
     &:before {
         content: "";
         background: url("/images/home-background.png") center center / cover no-repeat fixed;

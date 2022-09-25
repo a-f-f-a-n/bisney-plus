@@ -42,7 +42,7 @@ function ImageSlide() {
 export default ImageSlide
 
 const Slides = styled(Slider)`
-    margin-top: 20px;
+    margin-top: 6px;
     ul li button {
         display: block;
         position: absolute;
@@ -89,7 +89,7 @@ const Wrap = styled.div`
         padding: 4px
         cursor: pointer; 
         position: relative;
-        border: 4px solid transparent;
+        border: 4px solid black;
         box-shadow: rgb(0 0 0 / 70%) 0px 25px 30px -10px, rgb( 0 0 0 / 75%) 0px 15px 10px -10px;
 
         img {
