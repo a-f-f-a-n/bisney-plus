@@ -1,8 +1,7 @@
-import React from 'react'
 import Slider from 'react-slick'
-//import 'slick-carousel/slick/slick.css'
 import styled from 'styled-components'
-//import 'slick-carousel/slick/slick-theme.css' //i need these for the long slider thingys on disney plus
+import "slick-carousel/slick/slick.css"
+import 'slick-carousel/slick/slick-theme.css' //i need these for the long slider thingys on disney plus
 
 function ImageSlide() {
     let settings = {
@@ -16,9 +15,26 @@ function ImageSlide() {
     return (
         <Slides {...settings}>
             <Wrap>
-                <img src = '/images/nationalgeo1440.jpg' />
+                <a style = {{backgroundImage:`url(${'/images/nationalgeo1440.jpg'})`, backgroundSize: 'contain'}} >
+                    {/* //  <img src =  alt= 'picture of national geographic supernatural' /> */}
+                     <img src = '/images/nationalgeop2.png' />
+                </a>
             </Wrap>
-                <img src = '/images/thor1440.jpg' />
+            <Wrap>
+                <a style = {{backgroundImage:`url(${'/images/thor1440.jpg'})`, backgroundSize: 'contain'}}>
+                    <img src = '/images/thorp2.png'/>
+                </a>
+            </Wrap>
+            <Wrap> 
+                <a style = {{backgroundImage:`url(${'/images/simpson1440.jpg'})`, backgroundSize: 'contain'}}>
+                    <img src = '/images/simpsonp2.png' />
+                </a>
+            </Wrap>
+            <Wrap> 
+                <a style = {{backgroundImage:`url(${'/images/canada1440.png'})`, backgroundSize: 'contain'}}>
+                    <img src = '/images/canadap2.png' />
+                </a>
+            </Wrap>
         </Slides>
     )
 }
@@ -26,30 +42,65 @@ function ImageSlide() {
 export default ImageSlide
 
 const Slides = styled(Slider)`
+    margin-top: 20px;
     ul li button {
+        display: block;
+        position: absolute;
+        background: transparent;
         &:before {
-           font-size 10px;
+            opacity: 1;
+            padding: 5px;
+            top: -30px;
+            right: 20px;
+            left: 550px;
+            width: 20px;
+            font-size: 7px;
+            color: rgb(150, 158, 171);
        }
     }
     li.slick-active button:: before {
-        color: white;
+        color: rgb(249, 249, 249);
     }
     
     .slick-list {
-        overflow:visible
+        overflow: visible;
     }
-    margin-top: 20px
+    slick-prev {
+        left: -75px;
+      }
+    slick-next {
+        right: -75px;
+      }
 
     button {
         z-index: 1; //without this there would be no previous button
     }
+
 `
 const Wrap = styled.div`
-    img {
+    top: 12px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+     a {
+        display: block;
+        border-radius: 4px;
+        padding: 4px
+        cursor: pointer; 
+        position: relative;
         border: 4px solid transparent;
-        border-radius: 4px; //allows rounded corners
-        width: 100%;
-        height: 100%;
         box-shadow: rgb(0 0 0 / 70%) 0px 25px 30px -10px, rgb( 0 0 0 / 75%) 0px 15px 10px -10px;
-    }
-`
+
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    
+        &:hover {
+            border: 4px solid rgba(249, 249, 249);
+            transition-duration: 300ms;
+        }
+    }  
+`;
