@@ -2,11 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import ImageSlide from './ImageSlide'
 import LogoViewers from './LogoViewers'
+import Recommended from './Recommended'
 function Home() {
     return (
         <Body>
             <ImageSlide />
             <LogoViewers />
+            <Recommended />
         </Body>
     )
 }
@@ -20,8 +22,7 @@ const Body = styled.main`
     overflow-x: hidden; //this makes sure that content overflowing view width doesnt do that anymore
     &:before {
         content: "";
-        background: url("/images/home-background.png") center center / cover no-repeat fixed;
-        
+        background: url("/images/home-background.png") center center / cover no-repeat fixed;   
         position: absolute;
         opacity: 1;
         top: 0; 
