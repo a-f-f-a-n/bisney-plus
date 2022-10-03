@@ -1,47 +1,98 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useNavigate } from "react-router-dom";
 
 function Recommended() {
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = `play`; 
+        navigate(path);
+    }
     return (
         <Container>
             <h4>Recommended For You</h4>
             <Content>
             <Images>
-                <img src="/images/familyguy400.jpg" />
+                <img src="/images/familyguy400.jpg" onClick={routeChange}/>
             </Images>
             <Images>
-                <img src="/images/modernfamily400.jpg" />
+                <img src="/images/modernfamily400.jpg" onClick={routeChange}/>
             </Images>
             <Images>
-                <img src="/images/simpsons400.jpg" />
+                <img src="/images/simpsons400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/bluey400.jpg" />
+                <img src="/images/bluey400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/bobburger400.jpg" />
+                <img src="/images/bobburger400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/criminalminds400.jpg" />
+                <img src="/images/criminalminds400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/starwars400.jpg" />
+                <img src="/images/starwars400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/shehulk400.jpg" />
+                <img src="/images/shehulk400.jpg" onClick={routeChange}/>
             </Images>
             <Images>
-                <img src="/images/futurama400.jpg" />
+                <img src="/images/futurama400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/mickeymouse400.jpg" />
+                <img src="/images/mickeymouse400.jpg" onClick={routeChange} />
             </Images>
             <Images>
-                <img src="/images/malcolmmiddle400.jpg" />
+                <img src="/images/malcolmmiddle400.jpg" onClick={routeChange}/>
             </Images>
             <Images>
-                <img src="/images/cars400.jpg" />
+                <img src="/images/bao400.jpg" onClick={routeChange} />
             </Images>
+            </Content>
+            <h4>Cars</h4>
+            <Content>
+            <Images>
+                <img src="/images/cars400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/cars1400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/cars2400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/cars3400.jpg" onClick={routeChange} />
+            </Images>
+            </Content>
+            <h4>The Spider-Verse</h4>
+            <Content>
+            <Images>
+                <img src="/images/spiderman1400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/spiderman2400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/spiderman3400.jpg" onClick={routeChange} />
+            </Images>
+            <Images>
+                <img src="/images/spidermanh400.jpg" onClick={routeChange} />
+            </Images>
+            </Content>
+            <h4>Bisney Plus Recommends</h4>
+            <Content>
+                <Images>
+                    <img src="/images/dragonball400.jpg" onClick={routeChange} />
+                </Images>
+                <Images>
+                    <img src="/images/dragonball400.jpg" onClick={routeChange} />
+                </Images>
+                <Images>
+                    <img src="/images/dragonball400.jpg" onClick={routeChange} />
+                </Images>
+                <Images>
+                    <img src="/images/dragonball400.jpg" onClick={routeChange} />
+                </Images>
             </Content>
         </Container>
     )

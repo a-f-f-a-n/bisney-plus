@@ -1,15 +1,18 @@
-import React from 'react' 
+import React, { useEffect } from 'react' 
 import styled from 'styled-components'
 import ImageSlide from './ImageSlide'
 import LogoViewers from './LogoViewers'
 import Recommended from './Recommended'
+import Header from './Header'
 function Home() {
+
     return (
+        <><Header />
         <Body>
             <ImageSlide />
             <LogoViewers />
             <Recommended />
-        </Body>
+        </Body></>
     )
 }
 

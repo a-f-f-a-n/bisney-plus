@@ -2,6 +2,7 @@ import Slider from 'react-slick'
 import styled from 'styled-components'
 import "slick-carousel/slick/slick.css"
 import 'slick-carousel/slick/slick-theme.css' //i need these for the long slider thingys on disney plus
+import { useNavigate } from "react-router-dom";
 
 function ImageSlide() {
     let settings = {
@@ -12,27 +13,31 @@ function ImageSlide() {
         slidesToScroll: 1,
         autoplay: true
     }
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = `play`; 
+        navigate(path);
+  }
     return (
         <Slides {...settings}>
             <Wrap>
                 <a style = {{backgroundImage:`url(${'/images/nationalgeo1440.jpg'})`, backgroundSize: 'contain'}} >
-                    {/* //  <img src =  alt= 'picture of national geographic supernatural' /> */}
-                     <img src = '/images/nationalgeop2.png' />
+                     <img src = '/images/nationalgeop2.png' onClick={routeChange}/>
                 </a>
             </Wrap>
             <Wrap>
                 <a style = {{backgroundImage:`url(${'/images/thor1440.jpg'})`, backgroundSize: 'contain'}}>
-                    <img src = '/images/thorp2.png'/>
+                    <img src = '/images/thorp2.png' onClick={routeChange}/>
                 </a>
             </Wrap>
             <Wrap> 
                 <a style = {{backgroundImage:`url(${'/images/simpson1440.jpg'})`, backgroundSize: 'contain'}}>
-                    <img src = '/images/simpsonp2.png' />
+                    <img src = '/images/simpsonp2.png' onClick={routeChange}/>
                 </a>
             </Wrap>
             <Wrap> 
                 <a style = {{backgroundImage:`url(${'/images/canada1440.png'})`, backgroundSize: 'contain'}}>
-                    <img src = '/images/canadap2.png' />
+                    <img src = '/images/canadap2.png' onClick={routeChange} />
                 </a>
             </Wrap>
         </Slides>

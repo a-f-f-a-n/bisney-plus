@@ -73,17 +73,14 @@ const Nav_Menu = styled.div`
             padding: 0 10px;
             &:after { 
                 content: "";
-
                 height: 2px;
                 position: absolute;
                 
                 left: 0;
                 right: 0;
                 bottom: -6px;
-
                 background: white;
                 opacity: 0;
-
                 transition: all 250ms cubic-bezier(.25,.46,.45,.94);
                 transform-origin: left center;
                 transform: scaleX(0);

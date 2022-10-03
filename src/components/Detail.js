@@ -63,7 +63,7 @@ const ImageTitle = styled.div`
     width: 35vw;
     min-height: 170px;
     min-width: 200px;
-    displau: flex;
+    display: flex;
     z-index: 1;
     opacity: 1;
     img {
@@ -149,8 +149,9 @@ const Subtitles = styled.div`
     margin: 0px 0px 0px 100px;
 `
 const Description = styled.div`
-line-height: 1.4;
-font-size: 20px;
-color: rgb(249, 249, 249);
-margin: 0px 500px 0px 100px;
+    line-height: 1.4;
+    font-size: 20px;
+    color: rgb(249, 249, 249);
+    margin-left: 100px;
+    max-width: 700px;
 `
